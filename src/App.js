@@ -1,24 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PokemonCard from './Components/PokemonCard';
+import PokemonDetails from './Components/PokemonDetails';
+import ButtonLoadMore from './Components/ButtonLoadMore';
+
+import { Container, Row, Col } from 'react-bootstrap';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container fluid>
+        <Row>
+          <Col xs sm="8" lg="9">
+            <Container fluid>
+              <Row>
+                <PokemonCard />
+                <PokemonCard />
+                <PokemonCard />
+                <PokemonCard />
+              </Row>
+            </Container>
+
+            <ButtonLoadMore />
+
+          </Col>
+
+          <Col xs sm="4" lg="3">
+            <PokemonDetails />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
