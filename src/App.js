@@ -6,32 +6,34 @@ import ButtonLoadMore from './Components/ButtonLoadMore';
 import { Container, Row, Col } from 'react-bootstrap';
 
 
-function App() {
-  return (
-    <div className="App">
-      <Container fluid>
-        <Row>
-          <Col xs sm="8" lg="9">
-            <Container fluid>
-              <Row>
-                <PokemonCard />
-                <PokemonCard />
-                <PokemonCard />
-                <PokemonCard />
-              </Row>
-            </Container>
+class App extends React.Component {
+  render(){
+    return (
+      <div className="App">
+        <Container fluid>
+          <Row>
+            <Col xs sm="8" lg="9">
+              <Container fluid>
+                <Row>
+                  <PokemonCard />
+                  <PokemonCard />
+                  <PokemonCard />
+                  <PokemonCard />
+                </Row>
+              </Container>
 
-            <ButtonLoadMore />
+              <ButtonLoadMore />
 
-          </Col>
+            </Col>
 
-          <Col xs sm="4" lg="3">
-            <PokemonDetails />
-          </Col>
-        </Row>
-      </Container>
-    </div>
-  );
+            <Col xs sm="4" lg="3">
+              <PokemonDetails />
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    );
+  };
 }
 
 export default App;
